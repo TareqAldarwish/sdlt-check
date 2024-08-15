@@ -365,7 +365,7 @@ a:not(.image-link):focus-visible::after {
 }
 
 section {
-    min-height: 80svh;
+    min-height: 85svh;
     margin-block-end: 4rem;
     position: relative;
 }
