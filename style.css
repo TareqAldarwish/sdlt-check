@@ -466,7 +466,7 @@ section {
 
 .hero-img .clouds {
     --clouds-move-factor: 3000ms;
-    --clouds-delay-factor: 100ms;
+    --clouds-delay-factor: 200ms;
 }
 
 .hero-img .clouds>* {
@@ -479,8 +479,8 @@ section {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     left: -50%;
-    z-index: 2;
-    opacity: .7;
+    z-index: -1;
+    opacity: .8;
 }
 
 .clouds .img-1 {
