@@ -455,6 +455,7 @@ section {
 }
 
 .hero-img {
+    margin-block-start: 3rem;
     width: 100svw;
     height: 50svh;
     position: relative;
@@ -577,6 +578,18 @@ section {
     left: 20%;
     bottom: -2%;
 }
+.hero-img .bush-4 {
+    height: 50%;
+    position: absolute;
+    left: 15%;
+    bottom: -10%;
+}
+.hero-img .bush-5 {
+    height: 50%;
+    position: absolute;
+    left: 70%;
+    bottom: -2%;
+}
 
 .hero-img .owl {
     z-index: 11;
@@ -607,11 +620,11 @@ section {
 .hero-img .line {
     z-index: 5;
     position: absolute;
-    width: 70%;
+    width: 78%;
     height: 6px;
-    left: 50%;
+    left: 55%;
     bottom: -2px;
-    translate: -50% 0;
+    translate: -55% 0;
 }
 
 /* SECOND SECTION */
