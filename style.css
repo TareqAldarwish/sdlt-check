@@ -823,7 +823,6 @@ footer {
     justify-content: space-between;
     margin-block: 5rem;
     font-size: 1.25rem;
-    padding-bottom: 30svh;
 }
 .footer-navigation a {
     font-size: inherit;
