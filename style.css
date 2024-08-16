@@ -633,6 +633,7 @@ section {
     font-family: var(--font-main);
     line-height: 1.2;
     margin-block-end: 2rem;
+    text-wrap: balance;
 }
 
 .section-2 .subtitle {
@@ -643,6 +644,7 @@ section {
     font-family: var(--font-main);
     line-height: 1.2;
     margin-block-end: 2rem;
+    text-wrap: balance;
 }
 
 .section-2 .services {
@@ -658,7 +660,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: start;
+    text-wrap: pretty;
     gap: .2rem;
 }
 
@@ -678,15 +681,19 @@ section {
 }
 
 .services .service .title {
-    /* font-family: var(--font-main); */
     font-size: 2.5rem;
     line-height: 1;
+    margin-block-end: 1rem;
 }
 
 .services .service p {
     font-size: 1.128rem;
     line-height: 1.1;
 
+}
+.services .service li {
+    list-style-type: disc;
+    font-size: 1.25rem;
 }
 
 .section-2 .owl-on-tree {
@@ -780,6 +787,7 @@ section {
 /* FOOTER SECTION */
 @keyframes roar {
     from {
+        transform: translateY(150%);
         rotate: 0deg;
         scale: 0;
     }
@@ -797,6 +805,7 @@ section {
         rotate: -8deg;
     }
     to {
+        transform: translateY(0);
         rotate: -15deg;
         scale: 1;
     }
@@ -846,11 +855,18 @@ footer {
     width: 100%;
 }
 .footer-images {
-    isolation: isolate;
-    position: relative;
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+    left: -5.2rem;
+    width: 100svw;
+    background-image: url('./img/background-buildings-3.png');
+    background-repeat: repeat-x; 
+    background-size: contain;
+    background-position: bottom center;
 
 }
-.footer-images .house {
+/* .footer-images .house {
     position: absolute;
     width: 25%;
     bottom: 0;
@@ -867,7 +883,7 @@ footer {
     width: 50%;
     bottom: 0;
     left: 35%;
-}
+} */
 .footer-bottom {
     position: relative;
     width: 100svw;
