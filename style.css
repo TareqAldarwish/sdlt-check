@@ -84,7 +84,7 @@ h6 {
 :root {
     --clr-primary: #7b1b67;
     --clr-secondary: #f6921f;
-    --clr-bg: #f1fDff;
+    --clr-bg: hsl(180, 89%, 92%);
     --clr-grey: #545454;
     --clr-red: #c30d42;
     --font-main: sans-serif;
@@ -788,16 +788,16 @@ section {
     }
     60% {
         rotate: -15deg;
+        scale: 1.25;
     }
     80% {
         rotate: 15deg;
-        scale: 1.15;
     }
     90% {
-        rotate: -5deg;
+        rotate: -8deg;
     }
     to {
-        rotate: 0deg;
+        rotate: -15deg;
         scale: 1;
     }
     
@@ -823,6 +823,7 @@ footer {
     justify-content: space-between;
     margin-block: 5rem;
     font-size: 1.25rem;
+    padding-bottom: 30svh;
 }
 .footer-navigation a {
     font-size: inherit;
@@ -846,7 +847,6 @@ footer {
     width: 100%;
 }
 .footer-images {
-    min-height: 20vh;
     isolation: isolate;
     position: relative;
 
@@ -873,7 +873,7 @@ footer {
     position: relative;
     width: 100svw;
     margin: 0 -5rem;
-    padding-block: 1.5rem;
+    padding-block: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -888,19 +888,17 @@ footer {
 }
 .footer-bottom .roaring-owl {
     position: absolute;
-    width: 10%;
+    width: 9%;
     bottom: 0;
     right: 5%;
 }
 .footer-bottom .roar {
     z-index: 10;
     position: absolute;
-    width: 10%;
-    bottom: 250%;
-    right: 8%;
+    height: 80%;
+    bottom: 220%;
+    right: 10%;
     transform-origin: bottom center;
-    /* scale: 0; */
-    /* animation: roar 1s infinite; */
 }
 .footer-bottom .roar.visible {
     animation: roar 1000ms normal forwards;
