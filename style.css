@@ -84,7 +84,7 @@ h6 {
 :root {
     --clr-primary: #7b1b67;
     --clr-secondary: #f6921f;
-    --clr-bg: #fcf9da;
+    --clr-bg: #f1fDff;
     --clr-grey: #545454;
     --clr-red: #c30d42;
     --font-main: sans-serif;
@@ -165,8 +165,8 @@ header>* {
 .left ul {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
-    justify-content: start;
+    gap: clamp(12px, 2.5rem, 46px);
+    justify-content: center;
 }
 
 a:not(.image-link) {
@@ -223,17 +223,6 @@ a:not(.image-link):focus-visible::after {
     width: 60%;
 }
 
-/* .logo-left {
-    color: var(--clr-primary);
-    font-weight: bold;
-    font-size: 3rem;
-}
-
-.logo-right {
-    color: var(--clr-secondary);
-    font-size: 3rem;
-} */
-
 .right {
     display: flex;
     justify-content: flex-end;
@@ -283,6 +272,9 @@ a:not(.image-link):focus-visible::after {
     display: flex;
     flex-direction: row;
     gap: .2rem;
+}
+.gap-xl {
+    gap: 8rem;
 }
 .gap-lg {
     gap: 4rem;
@@ -543,18 +535,18 @@ section {
 .hero-img .house {
     height: 80%;
     position: absolute;
-    left: 50%;
+    left: 45%;
     bottom: 0;
-    translate: -50% 0;
+    translate: -45% 0;
     z-index: 10;
 }
 
 .hero-img .sun {
     height: 80%;
     position: absolute;
-    left: 50%;
+    left: 55%;
     bottom: 15%;
-    translate: -50% 0;
+    translate: -55% 0;
     z-index: 1;
 }
 
@@ -656,7 +648,7 @@ section {
 .section-2 .services {
     display: flex;
     flex-wrap: nowrap;
-    gap: 3rem;
+    gap: clamp(30px, 3rem, 70px);
     padding: 1rem 8rem;
     height: 40svh;
 }
@@ -686,8 +678,8 @@ section {
 }
 
 .services .service .title {
-    font-family: var(--font-main);
-    font-size: 1.5rem;
+    /* font-family: var(--font-main); */
+    font-size: 2.5rem;
     line-height: 1;
 }
 
@@ -733,7 +725,7 @@ section {
     margin-inline: auto;
     font-family: var(--font-main);
     line-height: 1.2;
-    margin-block-end: 2rem;
+    margin-block-end: 3.5rem;
 }
 
 .section-3 .news {
@@ -788,16 +780,18 @@ section {
 /* FOOTER SECTION */
 @keyframes roar {
     from {
+        rotate: 0deg;
         scale: 0;
     }
     30% {
-        rotate: 40deg;
+        rotate: 55deg;
     }
     60% {
         rotate: -15deg;
     }
     80% {
         rotate: 15deg;
+        scale: 1.15;
     }
     90% {
         rotate: -5deg;
@@ -825,12 +819,14 @@ footer {
     font-size: 2rem;
 }
 .footer-navigation {
-    width: 60%;
-    margin-inline-end: 0;
-    margin-inline-start: auto;
     display: flex;
     justify-content: space-between;
     margin-block: 5rem;
+    font-size: 1.25rem;
+}
+.footer-navigation a {
+    font-size: inherit;
+    font-weight: bold;
 }
 .social-media {
     margin-block: .5rem;
@@ -844,57 +840,73 @@ footer {
 .social-icon:focus-within {
     scale: 1.1;
 }
+.footer-images-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 .footer-images {
     min-height: 20vh;
     isolation: isolate;
     position: relative;
 
 }
-.footer-images .big-ben {
+.footer-images .house {
     position: absolute;
-    width: 10%;
+    width: 25%;
     bottom: 0;
     left: 10%;
 }
-.footer-images .background-buildings {
+.footer-images .background-buildings-1 {
     position: absolute;
-    height: 150%;
+    width: 25%;
     bottom: 0;
-    left: -5.2rem;
-    width: 100svw;
-    background-image: url('./img/background-buildings.png');
-    background-repeat: repeat-x; 
-    background-size: contain;
-
+    left: 10%;
 }
-.footer-images .roaring-owl {
+.footer-images .background-buildings-2 {
+    position: absolute;
+    width: 50%;
+    bottom: 0;
+    left: 35%;
+}
+.footer-bottom {
+    position: relative;
+    width: 100svw;
+    margin: 0 -5rem;
+    padding-block: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-primary);
+}
+.footer-bottom .footer-text {
+    color: white;
+    bottom: 0;
+    right: 0;
+    font-size: 1.66rem;
+    line-height: 1;
+}
+.footer-bottom .roaring-owl {
     position: absolute;
     width: 10%;
     bottom: 0;
     right: 5%;
 }
-.footer-images .roar {
+.footer-bottom .roar {
     z-index: 10;
     position: absolute;
     width: 10%;
-    bottom: 10%;
-    right: 15%;
-    transform-origin: top right;
-    scale: 0;
+    bottom: 250%;
+    right: 8%;
+    transform-origin: bottom center;
+    /* scale: 0; */
     /* animation: roar 1s infinite; */
 }
-.footer-images .roar.visible {
+.footer-bottom .roar.visible {
     animation: roar 1000ms normal forwards;
 }
-.footer-images .footer-text {
-    position: absolute;
-    color: white;
-    bottom: 8%;
-    right: 30%;
-    font-size: 1.66rem;
-    line-height: 1;
-}
-.footer-images .font-longway.font-red {
+
+.footer-bottom .font-longway.font-red {
     font-size: 3rem;
 }
 

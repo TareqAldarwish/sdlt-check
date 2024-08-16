@@ -95,6 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, observerOptions);
 
-    let section = document.querySelector('.footer');
+    let section = document.querySelector('.footer-bottom');
     observer.observe(section);
 });
